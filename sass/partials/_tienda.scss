@@ -1,0 +1,33 @@
+@use "../generales.scss/generales";
+
+nav{
+    @extend %navbar
+}
+.contenedor-prod{
+    h1 {
+        color: generales.$color-titulo;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 70px;
+        background-color: rgba(26, 107, 26, 0.692);
+        border-radius: 300px;
+        padding: 30px;
+    }
+    .merch {
+        display: flex;
+        justify-content: space-evenly;
+        
+        h4 {
+            color: rgb(13, 133, 13);
+            text-decoration: none;
+            font-weight: lighter;
+            font-size: large;
+            &:hover, &:active{
+                font-size: 100%;
+            }
+        }
+    }
+}
+footer{
+    @extend %footer
+}

@@ -1,0 +1,267 @@
+
+// VARIABLES //
+$color-titulo: rgb(255, 255, 255);
+$color-titulo2:rgba(0, 0, 0, 0.795); 
+
+// EXTEND //
+%navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(26, 107, 26);
+    padding: 10px;
+    .logoCazador {
+        height: 80px;
+        width: 80px;
+        margin: 5px 0;
+        border-radius: 20px;
+    }
+    .divContainer {
+        padding: 0%;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        li {
+            list-style-type: none;
+            margin: 0px 5px;
+            a {
+                text-decoration: none;
+                color: $color-titulo;
+                font-size: large;
+                &:hover, &:active {
+                    font-size: 120%;
+                    color: aliceblue;
+                }
+            }
+        }
+    }
+}
+%cont-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: rgba(26, 107, 26, 0.692);
+    border-radius: 20px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+%footer {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(26, 107, 26);
+        padding: 0;
+        .content-foo {
+            margin-bottom: 100px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            ul{
+                display: flex;
+                flex-direction: row;
+                li {
+                    list-style-type: none;
+                    margin-left: 10px;
+                    a {
+                        text-decoration: none;
+                        color: $color-titulo;
+                        font-size: large;
+                        &:hover, &:active {
+                            font-size: 120%;
+                            color: aliceblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RESET //
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// HEADER //
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    nav {
+        @extend %navbar
+    }
+    .textos-header {
+        display: flex;
+        flex-direction: column;
+        height: 430px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center
+    }
+    .titulo {
+        color: $color-titulo;
+        font-size: 50px;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.795);
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .titulo2 {
+        color: $color-titulo;
+        font-size: 50px;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.795);
+        text-align: center;
+        position: relative;
+        top: 30px;
+    }
+    .wave-container {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        top: 305px;
+        background-color: rgba(26, 107, 26, 0);
+        overflow: hidden;
+        .wave {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-image: url(../img/wave.png);
+            background-size: 1000px 100px;
+            animation: wave 20s linear infinite;
+            overflow: hidden;
+        }
+        @keyframes wave {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+    }
+}
+
+// HOME //
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.418);
+    .contenedor-home {
+        display: flex;
+        align-items: center;
+        background-color: rgba(26, 107, 26, 0.575);
+        margin-bottom: 70px;
+        border-radius: 50px;
+        margin-top: 100px;
+        img{
+            height: 400px;
+            width: 400px;
+            margin: 10px;
+            border: 2px solid;
+            border-radius: 50%;
+        }
+        .titulo-home {
+            color: $color-titulo;
+            text-align: center;
+        }
+        p {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            padding: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+    }
+    .proximo {
+        #carouselExampleCaptions {
+            padding: 30px;
+            background-color: rgba(26, 107, 26, 0.411);
+            width: 100%;
+            border-radius: 50px;
+            .titulo-prox {
+                display: flex;
+                justify-content: center;
+                margin-top: 0px;
+                border-radius: 20px;
+                padding: 10px;
+                color: $color-titulo;
+            }
+            .img-prox {
+                width: 100%;
+                border-radius: 50px;
+                margin-bottom: 60px;
+            }
+        }
+    }
+    .contenedor-prod{
+        .titulo-prod {
+            color: $color-titulo;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 70px;
+            background-color: rgba(26, 107, 26, 0.692);
+            border-radius: 300px;
+            padding: 30px;
+        }
+        .merch {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 300px 0px;
+            h4 {
+                color: rgb(13, 133, 13);
+                font-weight: lighter;
+                font-size: large;
+                &:hover, &:active {
+                    font-size: 130%;
+                }
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// FOOTER //
+footer{
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(26, 107, 26);
+        padding: 0;
+        .content-foo {
+            margin-bottom: 100px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            ul{
+                display: flex;
+                flex-direction: row;
+                li {
+                    list-style-type: none;
+                    margin-left: 10px;
+                    a {
+                        text-decoration: none;
+                        color: $color-titulo;
+                        font-size: large;
+                        &:hover, &:active {
+                            font-size: 120%;
+                            color: aliceblue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
