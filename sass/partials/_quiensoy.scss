@@ -52,6 +52,11 @@
         text-align: center;
         font-size: larger;
     }
+    a{
+        text-decoration: none;
+        color: green($color: #0fdf0fd3);
+        font-weight: 600;
+    }
 }
 
 .contenedor-redes{
