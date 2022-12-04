@@ -33,9 +33,6 @@ nav {
         border-radius: 30px;
         .formulario {
             margin: 50px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
             .iconos {
                 display: flex;
@@ -51,7 +48,4 @@ nav {
             }
         }
     }
-}
-footer{
-    @extend %footer
 }

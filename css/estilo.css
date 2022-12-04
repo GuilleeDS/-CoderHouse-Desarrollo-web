@@ -165,6 +165,8 @@ main .contenedor-home p {
   display: flex;
   justify-self: center;
   align-items: center;
+  font-size: larger;
+  font-weight: 500;
   padding: 20px;
   margin-right: 20px;
   text-align: center;
@@ -298,6 +300,11 @@ footer .contenedor-footer .content-foo ul li a:hover, footer .contenedor-footer 
   text-align: center;
   font-size: larger;
 }
+.contenedor-info a {
+  text-decoration: none;
+  color: 223;
+  font-weight: 600;
+}
 
 .contenedor-redes {
   margin: 20px;
@@ -375,9 +382,6 @@ footer .contenedor-footer .content-foo ul li a:hover, footer .contenedor-footer 
 }
 .contacto .contenedor-form .formulario {
   margin: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 }
 .contacto .contenedor-form .formulario .iconos {
@@ -446,6 +450,7 @@ footer .contenedor-footer .content-foo ul li a:hover, footer .contenedor-footer 
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 700;
   }
   .contenedor-prod {
     display: flex;
@@ -523,12 +528,18 @@ footer .contenedor-footer .content-foo ul li a:hover, footer .contenedor-footer 
     max-width: 700px;
     max-height: 500px;
   }
+  .contacto .contenedor-form {
+    margin: 30px;
+  }
+  .contacto .contenedor-form .formulario {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   header {
     width: auto;
     height: auto;
-    max-width: 768px;
     max-height: 700px;
   }
   header nav {
@@ -602,6 +613,10 @@ footer .contenedor-footer .content-foo ul li a:hover, footer .contenedor-footer 
     height: auto;
     max-width: 700px;
     max-height: 500px;
+  }
+  .contacto .contenedor-form .formulario {
+    display: flex;
+    flex-direction: column;
   }
 }
 
